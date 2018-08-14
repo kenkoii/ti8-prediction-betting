@@ -7,4 +7,6 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'ratgpii-ti8';
+  selectedOption = "rules";
+  //http://www.dota2.com/international/getgroupstagestandings/?l=english
 }
