@@ -23,7 +23,7 @@ export class TeamsService {
     {'name': 'Winstrike', 'tag': 'Winstrike', 'weightedPoints': 4, 'imageUrl': 'http://cdn.dota2.com/apps/dota2/images/international2018/overview/teamlogos/small/5229127.png'},
     {'name':  'Invictus Gaming', 'tag':  'IG', 'weightedPoints': 3, 'imageUrl': 'http://cdn.dota2.com/apps/dota2/images/international2018/overview/teamlogos/small/5.png'},
     {'name': 'TNC.Predator', 'tag': 'TNC', 'weightedPoints': 3, 'imageUrl': 'http://cdn.dota2.com/apps/dota2/images/international2018/overview/teamlogos/small/2108395.png'},
-    {'name': 'Pain Gaming', 'tag': 'Pain', 'weightedPoints': 2, 'imageUrl': 'http://cdn.dota2.com/apps/dota2/images/international2018/overview/teamlogos/small/5.png'},
+    {'name': 'Pain Gaming', 'tag': 'Pain', 'weightedPoints': 2, 'imageUrl': 'http://cdn.dota2.com/apps/dota2/images/international2018/overview/teamlogos/small/67.png'},
     {'name': 'Team Serenity', 'tag': 'Serenity', 'weightedPoints': 2, 'imageUrl': 'http://cdn.dota2.com/apps/dota2/images/international2018/overview/teamlogos/small/5066616.png'},
   ];
 
