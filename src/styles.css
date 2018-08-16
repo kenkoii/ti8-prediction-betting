@@ -1,10 +1,158 @@
 /* You can add global styles to this file, and also import other style files */
-@import url("http://www.dota2.com/public/css/global.css?v=b4665185");
-@import url("http://www.dota2.com/public/css/global_english.css?v=BpCw4C6e29Gp");
-@import url("http://www.dota2.com/public/css/publicheader.css?v=dxJw6XR3DWJ3");
-@import url("http://www.dota2.com/public/css/international2018/overview/schedule.css?v=iW0jI6kMg80l");
-@import url("http://www.dota2.com/public/css/international2018/overview/teams.css?v=-FTwhQ3U7rYp");
-@import url("http://www.dota2.com/public/css/international2018/overview/overview.css?v=kNs9jTcWaVPp");
-@import url("http://www.dota2.com/public/css/match_details.css?v=Gz3pEvAa-Fd5");
-@import url("http://www.dota2.com/public/css/jquery.tournamentschedule.css?v=.UgmoEp5gEsFi");
 
+@import url("https://www.dota2.com/public/css/global.css?v=b4665185");
+@import url("https://www.dota2.com/public/css/global_english.css?v=BpCw4C6e29Gp");
+@import url("https://www.dota2.com/public/css/publicheader.css?v=dxJw6XR3DWJ3");
+@import url("https://www.dota2.com/public/css/international2018/overview/schedule.css?v=iW0jI6kMg80l");
+@import url("https://www.dota2.com/public/css/international2018/overview/teams.css?v=-FTwhQ3U7rYp");
+@import url("https://www.dota2.com/public/css/international2018/overview/overview.css?v=kNs9jTcWaVPp");
+@import url("https://www.dota2.com/public/css/match_details.css?v=Gz3pEvAa-Fd5");
+@import url("https://www.dota2.com/public/css/jquery.tournamentschedule.css?v=.UgmoEp5gEsFi");
+@import url("https://www.dota2.com/public/css/international2018/jquery.tournamentschedule.css?v=.9bWa3JnzDoYH");
+* {
+  outline: none;
+}
+
+.player {
+  width: 100%;
+  padding: 10px;
+  position: relative;
+}
+
+.player::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.player-info {
+  float: left;
+  width: 16.66%;
+  padding: 10px;
+  text-align: center;
+}
+
+.player-name {
+  padding: 10px;
+  vertical-align: middle;
+}
+
+.player-points {
+  width: 60px;
+  height: 60px;
+  background: #000;
+  padding: 10px;
+  border: 2px solid #ffecce;
+  color: #ffecce;
+  font-size: 33px;
+  margin: 10px auto;
+}
+
+.player-points h4 {
+  margin: 0;
+  vertical-align: middle;
+}
+
+.player-points.warning {
+  background: #ed4949;
+  border: 2px solid #ed4949;
+}
+
+.player-savebutton {
+  width: 100%;
+  height: 60px;
+  background: #ffecce;
+  padding: 10px;
+  border: 2px solid #ffecce;
+  color: #000;
+  font-size: 33px;
+  margin: 10px auto;
+}
+
+.player-savebutton.disabled {
+  border: 2px solid #272d27;
+  background: #272d27;
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.team-img {
+  width: 60px;
+  height: 60px;
+  border: 2px solid #ffecce;
+  margin: 10px auto;
+  padding: 10px;
+}
+
+.team-img img {
+  width: 100%;
+  height: auto;
+}
+
+.team-dropdown {
+  position: relative;
+}
+
+.team-dropdown select {
+  width: 100%;
+  background: #000;
+  padding: 10px;
+  border: 2px solid #ffecce;
+  border-radius: 0px !important;
+  color: #ffecce;
+  font-size: 15px;
+  -webkit-appearance: none;
+}
+
+.team-dropdown::after {
+  content: "";
+  position: absolute;
+  top: 18px;
+  right: 10px;
+  display: block;
+  height: 0;
+  width: 0;
+  border-top: 5px solid #ffecce;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+}
+
+/* =========================FONTS================================ */
+
+html {
+  box-sizing: border-box
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit
+}
+
+body {
+  background-color: #000
+}
+
+@font-face {
+  font-family: 'Radiance';
+  src: url('assets/fonts/radiance.eot');
+  src: url('assets/fonts/radiance.eot') format("embedded-opentype"), url('assets/fonts/radiance.woff') format("woff"), url('assets/fonts/radiance.ttf') format("truetype"), url("http://cdn.dota2.com/apps/dota2/fonts/radiance.svg#ywftsvg") format("svg");
+  font-weight: normal;
+  font-style: normal
+}
+
+@font-face {
+  font-family: 'Radiance-SemiBold';
+  src: url('assets/fonts/radiance-semibold.eot');
+  src: url('assets/fonts/radiance-semibold.eot') format("embedded-opentype"), url('assets/fonts/radiance-semibold.woff') format("woff"), url('assets/fonts/radiance-semibold.ttf') format("truetype"), url("http://cdn.dota2.com/apps/dota2/fonts/radiance-semibold.svg#ywftsvg") format("svg");
+  font-weight: normal;
+  font-style: normal
+}
+
+body {
+  font-family: "Radiance", Verdana
+}
+
+.DotaFont {
+  font-family: "Radiance", Verdana
+}

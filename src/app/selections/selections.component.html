@@ -5,102 +5,17 @@
     <br>
   </div>
 </div>
-<!-- 
-<div id="TournamentDaysContainer" class="Container">
-  <div id="TournamentDaysContent" class="Content">
-      <div class="PhaseSection">
-          August
-          <br>
-          <a href="http://www.dota2.com/international/schedule/0/0/?l=english">
-              <div class="DayNavContainer DayNavSelected">
-                  <div class="DayNav">Wed
-                      <br/>
-                      <span class="DayNumber">15</span>
-                  </div>
-              </div>
-          </a>
-          <a href="http://www.dota2.com/international/schedule/1/0/?l=english">
-              <div class="DayNavContainer">
-                  <div class="DayNav">Thu
-                      <br/>
-                      <span class="DayNumber">16</span>
-                  </div>
-              </div>
-          </a>
-          <a href="http://www.dota2.com/international/schedule/2/0/?l=english">
-              <div class="DayNavContainer">
-                  <div class="DayNav">Fri
-                      <br/>
-                      <span class="DayNumber">17</span>
-                  </div>
-              </div>
-          </a>
-          <a href="http://www.dota2.com/international/schedule/3/0/?l=english">
-              <div class="DayNavContainer">
-                  <div class="DayNav">Sat
-                      <br/>
-                      <span class="DayNumber">18</span>
-                  </div>
-              </div>
-          </a>
-          <br>Group Stage </div>
-      <div class="PhaseSection">
-          August
-          <br>
-          <a href="http://www.dota2.com/international/schedule/4/0/?l=english">
-              <div class="DayNavContainer">
-                  <div class="DayNav">Mon
-                      <br/>
-                      <span class="DayNumber">20</span>
-                  </div>
-              </div>
-          </a>
-          <a href="http://www.dota2.com/international/schedule/5/0/?l=english">
-              <div class="DayNavContainer">
-                  <div class="DayNav">Tue
-                      <br/>
-                      <span class="DayNumber">21</span>
-                  </div>
-              </div>
-          </a>
-          <a href="http://www.dota2.com/international/schedule/6/0/?l=english">
-              <div class="DayNavContainer">
-                  <div class="DayNav">Wed
-                      <br/>
-                      <span class="DayNumber">22</span>
-                  </div>
-              </div>
-          </a>
-          <a href="http://www.dota2.com/international/schedule/7/0/?l=english">
-              <div class="DayNavContainer">
-                  <div class="DayNav">Thu
-                      <br/>
-                      <span class="DayNumber">23</span>
-                  </div>
-              </div>
-          </a>
-          <a href="http://www.dota2.com/international/schedule/8/0/?l=english">
-              <div class="DayNavContainer">
-                  <div class="DayNav">Fri
-                      <br/>
-                      <span class="DayNumber">24</span>
-                  </div>
-              </div>
-          </a>
-          <a href="http://www.dota2.com/international/schedule/9/0/?l=english">
-              <div class="DayNavContainer">
-                  <div class="DayNav">Sat
-                      <br/>
-                      <span class="DayNumber">25</span>
-                  </div>
-              </div>
-          </a>
-          <br>Main Event </div>
-  </div>
-</div> -->
 <div id="ScheduleContainer" class="Container">
-  <div id="ScheduleArea" class="ScheduleContainer">
-    <div class="overlay" style="display: none;"></div>
-    <div class="NoGamesSchedule">No Upcoming Games Scheduled</div>
+    <div id="ScheduleContent" class="Content">
+
+    <div id="ScheduleArea" class="ScheduleContainer">
+    <div class="ScheduleGroup">
+        <div class="ScheduleRow">
+            <h1>PICK 3 TEAMS</h1>
+            <div class="player" *ngFor="let player of players">
+                <app-selection-item [player]="player" (selectionUpdate)="OnSave($event, player.key)"></app-selection-item>
+            </div>
+      </div>
+    </div>
   </div>
 </div>

@@ -1,0 +1,6 @@
+{
+  "projects": {
+    "prod": "ti8-ratgpii",
+    "default": "ti8-ratgpii"
+  }
+}

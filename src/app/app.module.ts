@@ -7,11 +7,16 @@ import { OverviewComponent } from './overview/overview.component';
 import { AppRoutingModule } from './/app-routing.module';
 import { TeamsComponent } from './teams/teams.component';
 import { SelectionsComponent } from './selections/selections.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AngularFireModule } from 'angularfire2';
-import { AngularFirestoreModule } from 'angularfire2/firestore';
+import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { AngularFireAuthModule } from 'angularfire2/auth';
 import { environment } from '../environments/environment';
+import { AngularService } from './angular.service';
+import { TeamsService } from './teams.service';
+import { TeamDropdownComponent } from './team-dropdown/team-dropdown.component';
+import { SelectionItemComponent } from './selection-item/selection-item.component';
 
 
 @NgModule({
@@ -20,16 +25,19 @@ import { environment } from '../environments/environment';
     HeaderComponent,
     OverviewComponent,
     TeamsComponent,
-    SelectionsComponent
+    SelectionsComponent,
+    TeamDropdownComponent,
+    SelectionItemComponent
   ],
   imports: [
     AngularFireModule.initializeApp(environment.firebase),
-    AngularFirestoreModule,
+    AngularFireDatabaseModule,
     AngularFireAuthModule,
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
-  providers: [],
+  providers: [AngularService, TeamsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,13 +1,15 @@
 <div id="navBarBGRepeat" class="DotaFont">
   <div id="navBarBG">
     <div id="navBar">
-      <a href="http://store.steampowered.com/app/570/Dota_2/">
-        <div id="PlayForFreeButton">
-          Login
-        </div>
-      </a>
+      <div id="PlayForFreeButton" (click)="onClickLoginButton()">
+        <span>{{user!=null?"Logout":"Login"}}</span>
+      </div>
+
 
       <div class="navItem BoxLargeText">RATGPII TI8 PREDICTIONS</div>
+      <div id="navLoginAndLanguage" >
+        {{user!=null?user.displayName:""}}
+      </div>
     </div>
   </div>
 </div>
@@ -36,9 +38,9 @@
 
     <a routerLink="/selections" [ngClass]="{NavBarSelected: route == '/selections'}">Selections</a>
 
-    <span class="NavBarSpacer">|</span>
+    <!-- <span class="NavBarSpacer">|</span>
 
-    <a routerLink="http://www.dota2.com/international/standings/">Leaderboard</a>
+    <a routerLink="http://www.dota2.com/international/standings/">Leaderboard</a> -->
 
     <span class="NavBarSpacer">|</span>
 

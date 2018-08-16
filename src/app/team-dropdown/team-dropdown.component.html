@@ -1,0 +1,10 @@
+<div class="player-info">
+    <div class="team-img">
+        <img [src]="selectedTeam['imageUrl']" alt="">
+    </div>
+    <div class="team-dropdown" *ngIf="editable">
+        <select [(ngModel)]="selected" (change)="modelChange($event)">
+            <option *ngFor="let team of teams" [value]="team.tag">{{team.name+"("+team.weightedPoints+")" }}</option>
+        </select>
+    </div>
+</div>

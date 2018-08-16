@@ -1,0 +1,16 @@
+<div class="player-info">
+    <div class="player-name">
+        <h2>{{player.key}}</h2>
+    </div>
+</div>
+<div *ngFor="let selection of player.payload.val(); let i = index">
+    <app-team-dropdown [selectedTag]="selection" (selection)="onSelected($event, i)" [editable]="editable"></app-team-dropdown>
+</div>
+<div class="player-info">
+    <div [ngClass]="{warning: totalPoints > 21}" class="player-points">
+        <h4>{{totalPoints}}</h4>
+    </div>
+</div>
+<div class="player-info" *ngIf="editable">
+    <button type="submit" (click)="OnSave()" [attr.disabled]="totalPoints > 21 ? '' : null" [ngClass]="{disabled: totalPoints > 21}" class="player-savebutton">SAVE</button>
+</div>
