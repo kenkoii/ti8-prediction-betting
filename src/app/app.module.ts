@@ -17,6 +17,8 @@ import { AngularService } from './angular.service';
 import { TeamsService } from './teams.service';
 import { TeamDropdownComponent } from './team-dropdown/team-dropdown.component';
 import { SelectionItemComponent } from './selection-item/selection-item.component';
+import { StandingsComponent } from './standings/standings.component';
+import { OrderbyPipe } from './orderby.pipe';
 
 
 @NgModule({
@@ -27,7 +29,9 @@ import { SelectionItemComponent } from './selection-item/selection-item.componen
     TeamsComponent,
     SelectionsComponent,
     TeamDropdownComponent,
-    SelectionItemComponent
+    SelectionItemComponent,
+    StandingsComponent,
+    OrderbyPipe
   ],
   imports: [
     AngularFireModule.initializeApp(environment.firebase),

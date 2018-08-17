@@ -1,0 +1,37 @@
+<div id="ReplayNavBarContainer" class="Container">
+  <div id="ReplayNavBarContentTop" class="Content">
+    <div class="ReplayNavBarSectionRulesTicketing">
+      Leaderboard </div>
+    <br>
+  </div>
+</div>
+<div id="ScheduleContainer" class="Container">
+  <div id="GroupStandingsContainer" class="Container">
+    <div id="GroupStandings" class="StandingsContainer">
+      <div class="StandingsGroup">
+        <div class="StandingsHeader">Member
+          <div class="StandingsRightText">Pts</div>
+        </div>
+        <div class="StandingsTable">
+          <div class="StandingsRow" *ngFor="let player of playerScores">
+            {{player.key}}
+            <div class="StandingsRightText">{{player.value}}</div>
+          </div>
+        </div>
+      </div>
+      <br>
+      <div class="StandingsGroup">
+          <div class="StandingsHeader">Team
+            <div class="StandingsRightText">Pts</div>
+          </div>
+          <div class="StandingsTable">
+            <div class="StandingsRow" *ngFor="let team of teamScores">
+              <img [src]="getTeamObject(team.key)['imageUrl']" alt="">{{getTeamObject(team.key)['name']}}
+              <div class="StandingsRightText">{{team.value}}</div>
+            </div>
+          </div>
+        </div>
+      
+    </div>
+  </div>
+</div>

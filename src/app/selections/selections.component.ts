@@ -38,7 +38,7 @@ export class SelectionsComponent implements OnInit {
           alert("Saved successfully!");
         }, err => {
           console.log(err);
-        })
+        });
   }
 
 }

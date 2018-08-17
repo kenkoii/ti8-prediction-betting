@@ -9,6 +9,9 @@
 @import url("https://www.dota2.com/public/css/match_details.css?v=Gz3pEvAa-Fd5");
 @import url("https://www.dota2.com/public/css/jquery.tournamentschedule.css?v=.UgmoEp5gEsFi");
 @import url("https://www.dota2.com/public/css/international2018/jquery.tournamentschedule.css?v=.9bWa3JnzDoYH");
+@import url("https://www.dota2.com/public/css/international2018/jquery.tournamentstandings.css?v=.ZKwbmXRzYSHo");
+@import url("https://www.dota2.com/public/css/jquery.tournamentstandings.css?v=.Uy3u1uIhp2a5");
+
 * {
   outline: none;
 }
